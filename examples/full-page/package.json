@@ -1,16 +1,7 @@
 {
   "name": "com.example.pizzazz",
   "version": "0.0.1",
-  "description": "Loyalty program management for your Stripe Dashboard",
   "private": true,
-  "license": "proprietary",
-  "engines": {
-{
-  "name": "com.example.pizzazz",
-  "version": "0.0.1",
-  "description": "Loyalty program management for your Stripe Dashboard",
-  "private": true,
-  "license": "proprietary",
   "engines": {
     "node": "20.x"
   },
@@ -19,7 +10,7 @@
     "lint": "eslint --ext ts,tsx src",
     "test": "jest",
     "start": "stripe apps start",
-    "build": "mkdir -p $HOME/.stripe && curl -fsSL https://packages.stripe.dev/stripe-cli/install.sh | sh && export PATH=\"$HOME/.stripe/bin:$PATH\" && stripe version && stripe apps build"
+    "build": "bash -c 'curl -fsSL https://packages.stripe.dev/stripe-cli/install.sh | bash && export PATH=\"$HOME/.stripe/bin:$PATH\" && stripe version && stripe apps build'"
   },
   "dependencies": {
     "@stripe/ui-extension-sdk": "9.2.0-alpha.12",
@@ -29,42 +20,5 @@
   "devDependencies": {
     "@stripe/ui-extension-tools": "0.0.1",
     "@types/react": "^17.0.93"
-  },
-  "pnpm": {
-    "overrides": {
-      "@types/react": "^17.0.93"
-    }
-  },
-  "eslintConfig": {
-    "extends": [
-      "./node_modules/@stripe/ui-extension-tools/eslintrc.ui-extension.js"
-    ]
-  }
-}
-  },
-  "scripts": {
-    "lint": "eslint --ext ts,tsx src",
-    "test": "jest",
-    "start": "stripe apps start",
-    "build": "sh -c 'curl -s https://packages.stripe.dev/stripe-cli/install.sh | sh && $HOME/.stripe/bin/stripe apps build'"
-  },
-  "dependencies": {
-    "@stripe/ui-extension-sdk": "9.2.0-alpha.12",
-    "@tanstack/react-query": "5.101.2",
-    "stripe": "^17.7.0"
-  },
-  "devDependencies": {
-    "@stripe/ui-extension-tools": "0.0.1",
-    "@types/react": "^17.0.2"
-  },
-  "pnpm": {
-    "overrides": {
-      "@types/react": "^17.0.2"
-    }
-  },
-  "eslintConfig": {
-    "extends": [
-      "./node_modules/@stripe/ui-extension-tools/eslintrc.ui-extension.js"
-    ]
   }
 }
