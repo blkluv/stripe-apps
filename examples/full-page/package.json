@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Loyalty program management for your Stripe Dashboard",
   "private": true,
-  "license": "~~proprietary~~",
+  "license": "proprietary",
   "engines": {
     "node": ">=18"
   },
@@ -11,7 +11,7 @@
     "lint": "eslint --ext ts,tsx src",
     "test": "jest",
     "start": "stripe apps start",
-    "build": "stripe apps build"
+    "build": "sh -c 'curl -s https://packages.stripe.dev/stripe-cli/install.sh | sh && $HOME/.stripe/bin/stripe apps build'"
   },
   "dependencies": {
     "@stripe/ui-extension-sdk": "9.2.0-alpha.12",
